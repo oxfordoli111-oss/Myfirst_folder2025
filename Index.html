@@ -1,11 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Firebase Realtime Console Test</title>
-</head>
+<html>
 <body>
-  <h1>Hello Oxford oli</h1>
+   <h2>Welcome to Our Website</h2>
+   <p>Please enter your age to continue:</p>
+
+   <input type="number" id="ageInput" placeholder="Enter your age">
+   <button onclick="checkAge()">Submit</button>
+
+   <div id="output"></div>
+
+   <script type="text/javascript">
+      function checkAge() {
+         let age = document.getElementById("ageInput").value;
+         let result;
+
+         if (age >= 18) {
+            result = " Access granted. Welcome!";
+         } else {
+            result = " Access denied. You must be at least 18.";
+         }
+
+         document.getElementById("output").innerHTML = result;
+      }
+   </script>
 </body>
 </html>
