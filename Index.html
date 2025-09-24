@@ -1,11 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Firebase Realtime Console Test</title>
+  <meta charset="UTF-8">
+  <title>Secondhand Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- jQuery + jQuery Mobile -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+    .ui-page-theme-a {
+      background-color: #f5fdfc;
+    }
+    .ui-btn {
+      background-color: #009688 !important;
+      color: white !important;
+      border-radius: 10px;
+    }
+    .ui-header {
+      background: #004d40 !important;
+      color: white !important;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello Oxford oli</h1>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+  <div data-role="header">
+    <h1>Secondhand Market</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <h2>Welcome!</h2>
+    <p>Buy and sell pre-loved items easily. Connect with people around you.</p>
+    <a href="#post" class="ui-btn">Post an Item</a>
+    <a href="#browse" class="ui-btn">Browse Listings</a>
+  </div>
+  <div data-role="footer">
+    <h4>&copy; 2025 Secondhand Market</h4>
+  </div>
+</div>
+
+<!-- Post Item Page -->
+<div data-role="page" id="post">
+  <div data-role="header">
+    <h1>Post an Item</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <form>
+      <label for="title">Item Title:</label>
+      <input type="text" id="title" placeholder="e.g. Used Bicycle">
+
+      <label for="price">Price (Rs.):</label>
+      <input type="number" id="price" placeholder="e.g. 15000">
+
+      <label for="description">Description:</label>
+      <textarea id="description" placeholder="Brief details about your item"></textarea>
+
+      <label for="image">Upload Image:</label>
+      <input type="file" id="image">
+
+      <input type="submit" value="Submit Listing" class="ui-btn">
+    </form>
+    <a href="#home" class="ui-btn">Back to Home</a>
+  </div>
+  <div data-role="footer">
+    <h4>&copy; 2025 Secondhand Market</h4>
+  </div>
+</div>
+
+<!-- Browse Listings Page -->
+<div data-role="page" id="browse">
+  <div data-role="header">
+    <h1>Browse Listings</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <ul data-role="listview" data-inset="true">
+      <li>
+        <img src="https://via.placeholder.com/80" alt="item">
+        <h2>Used Bicycle</h2>
+        <p>Price: Rs. 15,000</p>
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/80" alt="item">
+        <h2>Wooden Study Table</h2>
+        <p>Price: Rs. 9,500</p>
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/80" alt="item">
+        <h2>Smartphone (Secondhand)</h2>
+        <p>Price: Rs. 25,000</p>
+      </li>
+    </ul>
+    <a href="#home" class="ui-btn">Back to Home</a>
+  </div>
+  <div data-role="footer">
+    <h4>&copy; 2025 Secondhand Market</h4>
+  </div>
+</div>
+
 </body>
 </html>
